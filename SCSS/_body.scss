@@ -1,0 +1,246 @@
+$color-orange: #ffc107;
+;
+$color-grey: #48504e;
+$color-lightgrey: #d4d4d3;
+$color-white: #fff;
+$color-black: #000;
+$background-color: rgba(255, 255, 255, .8);
+
+
+@mixin nav-list {
+    & ul {
+        font-size: 2.3rem;
+        line-height: 1.75;
+
+        & li {
+            text-align: right;
+            background: url(assets/strzalka.svg) right no-repeat;
+            line-height: 1.5rem;
+            padding-right: 4rem;
+            margin: 3rem;
+        }
+    }
+}
+
+
+html {
+    background: $color-orange url(assets/tlo.jpg) fixed no-repeat;
+    background-size: contain;
+    font-size: 62.5%;
+    font-family: 'Playfair Display', serif;
+    color: $color-grey;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 3.7rem;
+    background-color: $background-color;
+    padding: 3.5rem;
+    margin: 4.0rem;
+    border-top-left-radius: 2rem;
+}
+
+h2 {
+    font-size: 2.7rem;
+}
+
+h3 {
+    font-size: 3.1rem;
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+}
+
+h3,
+h2 {
+    display: inline-block;
+    background-color: $color-grey;
+    padding: 1.5rem;
+    color: $color-white;
+}
+
+h4 {
+    font-size: 2rem;
+    padding: 2rem 1rem;
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 1.55;
+}
+
+.deleted {
+    text-decoration: line-through;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    background-color: $background-color;
+}
+
+header {
+    display: none;
+    background: $color-grey;
+    color: $color-white;
+    height: 30rem;
+    padding: 10rem;
+
+    & nav {
+        margin-top: -7rem;
+        float: right;
+        @include nav-list;
+    }
+}
+
+.hoverme {
+    &:hover header {
+        display: block;
+    }
+
+    & .menu {
+        background: $color-white url(assets/menu.svg) center no-repeat;
+        height: 3.2rem;
+        margin: 1rem;
+        width: 3.2rem;
+        right: 0;
+        position: fixed;
+        padding: 1rem;
+        z-index: 9999;
+    }
+
+    & form {
+        float: left;
+        width: 35rem;
+
+        & input,
+        textarea {
+            width: 35rem;
+            background: none;
+            border: 2px solid #d4d4d3;
+            margin: .5rem;
+            padding: 1rem;
+            color: $color-white;
+            font-size: 1.7rem;
+        }
+
+        & button {
+            background: $color-orange;
+            border: none;
+            padding: 2rem 6rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            float: right;
+            cursor: pointer;
+            margin-top: -1.5rem;
+            margin-right: -3rem;
+        }
+    }
+
+}
+
+
+.summary {
+    font-size: 2.4rem;
+    font-style: italic;
+}
+
+.dot {
+    width: 1rem;
+    height: 1rem;
+    background-color: $color-grey;
+    margin: 3rem auto;
+    border-radius: 2rem;
+}
+
+section {
+    width: 50%;
+    min-width: 600px;
+    max-width: 850px;
+    position: absolute;
+    right: 5%;
+    padding-bottom: 6rem;
+
+    & article {
+        margin-bottom: 6rem;
+
+        & hgroup {
+            margin-left: -25%;
+            position: relative;
+            display: inline-block;
+        }
+
+        & .button-more {
+            display: inline-block;
+            border: 1px dashed $color-black;
+            font-size: 3.0rem;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            position: absolute;
+            right: 0;
+        }
+
+        & figure {
+            margin-left: -25%;
+            margin-top: 20%;
+            float: left;
+        }
+
+        & .text {
+            padding-top: 4rem;
+            column-count: 2;
+        }
+    }
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    background: $color-white;
+    z-index: 9999;
+
+    & p {
+        font-size: 1.4rem;
+    }
+}
+
+
+@media all and (max-width: 1200px) {
+    html {
+        background: $color-orange;
+    }
+
+    section {
+        width: 75%;
+    }
+
+    .bg {
+        background: url(assets/bg.jpg) fixed no-repeat;
+        height: 30rem;
+    }
+}
+
+@media all and (max-width: 768px) {
+    hgroup {
+        margin-left: 0;
+    }
+
+    figure {
+        display: none;
+    }
+
+    section {
+        width: 90%;
+        min-width: 300px;
+        right: 5%;
+    }
+
+    .text {
+        column-count: 1;
+    }
+}
