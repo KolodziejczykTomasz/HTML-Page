@@ -1,0 +1,257 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  background: #ffc107 url(assets/tlo.jpg) fixed no-repeat;
+  background-size: contain;
+  font-size: 62.5%;
+  font-family: 'Playfair Display', serif;
+  color: #48504e; }
+
+h1 {
+  display: inline-block;
+  font-size: 3.7rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 3.5rem;
+  margin: 4.0rem;
+  border-top-left-radius: 2rem; }
+
+h2 {
+  font-size: 2.7rem; }
+
+h3 {
+  font-size: 3.1rem;
+  position: absolute;
+  right: 0;
+  bottom: 5%; }
+
+h3,
+h2 {
+  display: inline-block;
+  background-color: #48504e;
+  padding: 1.5rem;
+  color: #fff; }
+
+h4 {
+  font-size: 2rem;
+  padding: 2rem 1rem; }
+
+p {
+  font-size: 1.8rem;
+  line-height: 1.55; }
+
+.deleted {
+  text-decoration: line-through; }
+
+strong {
+  font-weight: bold; }
+
+em {
+  background-color: rgba(255, 255, 255, 0.8); }
+
+header {
+  display: none;
+  background: #48504e;
+  color: #fff;
+  height: 30rem;
+  padding: 10rem; }
+  header nav {
+    margin-top: -7rem;
+    float: right; }
+    header nav ul {
+      font-size: 2.3rem;
+      line-height: 1.75; }
+      header nav ul li {
+        text-align: right;
+        background: url(assets/strzalka.svg) right no-repeat;
+        line-height: 1.5rem;
+        padding-right: 4rem;
+        margin: 3rem; }
+
+.hoverme:hover header {
+  display: block; }
+.hoverme .menu {
+  background: #fff url(assets/menu.svg) center no-repeat;
+  height: 3.2rem;
+  margin: 1rem;
+  width: 3.2rem;
+  right: 0;
+  position: fixed;
+  padding: 1rem;
+  z-index: 9999; }
+.hoverme form {
+  float: left;
+  width: 35rem; }
+  .hoverme form input,
+  .hoverme form textarea {
+    width: 35rem;
+    background: none;
+    border: 2px solid #d4d4d3;
+    margin: .5rem;
+    padding: 1rem;
+    color: #fff;
+    font-size: 1.7rem; }
+  .hoverme form button {
+    background: #ffc107;
+    border: none;
+    padding: 2rem 6rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    margin-top: -1.5rem;
+    margin-right: -3rem; }
+
+.summary {
+  font-size: 2.4rem;
+  font-style: italic; }
+
+.dot {
+  width: 1rem;
+  height: 1rem;
+  background-color: #48504e;
+  margin: 3rem auto;
+  border-radius: 2rem; }
+
+section {
+  width: 50%;
+  min-width: 600px;
+  max-width: 850px;
+  position: absolute;
+  right: 5%;
+  padding-bottom: 6rem; }
+  section article {
+    margin-bottom: 6rem; }
+    section article hgroup {
+      margin-left: -25%;
+      position: relative;
+      display: inline-block; }
+    section article .button-more {
+      display: inline-block;
+      border: 1px dashed #000;
+      font-size: 3.0rem;
+      padding: 1rem 1.5rem;
+      text-decoration: none;
+      position: absolute;
+      right: 0; }
+    section article figure {
+      margin-left: -25%;
+      margin-top: 20%;
+      float: left; }
+    section article .text {
+      padding-top: 4rem;
+      column-count: 2; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  background: #fff;
+  z-index: 9999; }
+  footer p {
+    font-size: 1.4rem; }
+
+@media all and (max-width: 1200px) {
+  html {
+    background: #ffc107; }
+
+  section {
+    width: 75%; }
+
+  .bg {
+    background: url(assets/bg.jpg) fixed no-repeat;
+    height: 30rem; } }
+@media all and (max-width: 768px) {
+  hgroup {
+    margin-left: 0; }
+
+  figure {
+    display: none; }
+
+  section {
+    width: 90%;
+    min-width: 300px;
+    right: 5%; }
+
+  .text {
+    column-count: 1; } }
+/*------------------------------------*\
+    BORDERS
+\*------------------------------------*/
+/* Create a series of empty pseudo-elements... */
+html:before, html:after, body:before, body:after {
+  content: "";
+  background: #fff;
+  position: fixed;
+  display: block;
+  z-index: 5; }
+
+/* ...and position them! */
+html:before {
+  height: 15px;
+  left: 0;
+  right: 0;
+  top: 0; }
+
+html:after {
+  width: 15px;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+
+body:before {
+  height: 15px;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+body:after {
+  width: 15px;
+  top: 0;
+  bottom: 0;
+  left: 0; }
